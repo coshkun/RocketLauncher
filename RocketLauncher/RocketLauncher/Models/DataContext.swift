@@ -20,6 +20,9 @@ class DataContext: NSObject, NSCoding {
     var KullaniciAdi:String = ""
     var Sifre:String = ""
     
+    var allLaunches:[Launch]      = [Launch]()
+    var upcomingLaunches:[Launch] = [Launch]()
+    
     
     //var UserLocation:MANLocation! = MANLocation()
     
@@ -46,6 +49,8 @@ class DataContext: NSObject, NSCoding {
 //        let encrypted = AES256CBC.encryptString(Sifre, password: appID)
 //        aCoder.encode(encrypted, forKey: "Sifre")
          aCoder.encode(Sifre, forKey: "Sifre")
+        
+        //aCoder.encode(allLaunches, forKey: "allLaunches")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,6 +66,8 @@ class DataContext: NSObject, NSCoding {
 //        let decrypted = AES256CBC.decryptString(encrypted, password: appID)
 //        Sifre = decrypted ?? ""
         Sifre = aDecoder.decodeObject(forKey: "Sifre") as? String ?? ""
+        
+        //allLaunches = aDecoder.decodeObject(forKey: "allLaunches") as? [Launch] ?? [Launch]()
         super.init()
     }
     

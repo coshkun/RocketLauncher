@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'RocketLauncher' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for RocketLauncher
+  pod 'SwiftyJSON'                              #JSON Parser
+  pod 'Alamofire'                               #Networking library
+  pod 'TTGSnackbar'                             #Toast Message library
+  pod 'Kingfisher', '~> 4.0', '<= 4.8.0'        #Image caching library
+  pod 'SVProgressHUD', '<= 2.2.5'               #Default styled spinner
+  pod 'lottie-ios'				#Animation library
+
+end

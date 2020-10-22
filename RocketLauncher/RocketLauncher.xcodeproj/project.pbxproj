@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51D440E5FCD9EFDD34C6F2C3 /* Pods_RocketLauncher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2584E7D0229C45C793C10C /* Pods_RocketLauncher.framework */; };
 		D539C3F2253B49B000AF9202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539C3F1253B49B000AF9202 /* AppDelegate.swift */; };
 		D539C3F7253B49B000AF9202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D539C3F5253B49B000AF9202 /* Main.storyboard */; };
 		D539C3F9253B49B300AF9202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D539C3F8253B49B300AF9202 /* Assets.xcassets */; };
@@ -18,10 +19,21 @@
 		D56664F2253DF3FF005BD9FC /* ServiceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56664F1253DF3FF005BD9FC /* ServiceErrors.swift */; };
 		D56664F6253DF4CB005BD9FC /* DataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56664F4253DF4CB005BD9FC /* DataContext.swift */; };
 		D56664F7253DF4CB005BD9FC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56664F5253DF4CB005BD9FC /* DataModel.swift */; };
+		D59F2137253E2E1100B368FC /* AllLaunchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F2136253E2E1100B368FC /* AllLaunchesVC.swift */; };
+		D59F213A253E2E6500B368FC /* LaunchDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F2139253E2E6500B368FC /* LaunchDetailVC.swift */; };
+		D59F213D253E3B6200B368FC /* DebugTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F213C253E3B6200B368FC /* DebugTools.swift */; };
+		D59F2140253E3B8A00B368FC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F213F253E3B8A00B368FC /* Extensions.swift */; };
+		D5C3ACD5253E09B70018CEB9 /* root_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = D5C3ACD3253E09B70018CEB9 /* root_loading.json */; };
+		D5C3ACD6253E09B70018CEB9 /* root_loading_2.json in Resources */ = {isa = PBXBuildFile; fileRef = D5C3ACD4253E09B70018CEB9 /* root_loading_2.json */; };
+		D5E1536C2540DF0700E59A41 /* AllLaunchesTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E1536A2540DF0700E59A41 /* AllLaunchesTVCell.swift */; };
+		D5E1536D2540DF0700E59A41 /* AllLaunchesTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5E1536B2540DF0700E59A41 /* AllLaunchesTVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D539C3EE253B49B000AF9202 /* RocketLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A67EB5C3A98F22C1D90C38F /* Pods-RocketLauncher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketLauncher.debug.xcconfig"; path = "Target Support Files/Pods-RocketLauncher/Pods-RocketLauncher.debug.xcconfig"; sourceTree = "<group>"; };
+		9E2584E7D0229C45C793C10C /* Pods_RocketLauncher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketLauncher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A959D130C3B38F8A75B0BF0D /* Pods-RocketLauncher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketLauncher.release.xcconfig"; path = "Target Support Files/Pods-RocketLauncher/Pods-RocketLauncher.release.xcconfig"; sourceTree = "<group>"; };
+		D539C3EE253B49B000AF9202 /* Rocket Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rocket Launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D539C3F1253B49B000AF9202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D539C3F6253B49B000AF9202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D539C3F8253B49B300AF9202 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +46,14 @@
 		D56664F1253DF3FF005BD9FC /* ServiceErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceErrors.swift; sourceTree = "<group>"; };
 		D56664F4253DF4CB005BD9FC /* DataContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContext.swift; sourceTree = "<group>"; };
 		D56664F5253DF4CB005BD9FC /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		D59F2136253E2E1100B368FC /* AllLaunchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLaunchesVC.swift; sourceTree = "<group>"; };
+		D59F2139253E2E6500B368FC /* LaunchDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailVC.swift; sourceTree = "<group>"; };
+		D59F213C253E3B6200B368FC /* DebugTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugTools.swift; sourceTree = "<group>"; };
+		D59F213F253E3B8A00B368FC /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D5C3ACD3253E09B70018CEB9 /* root_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = root_loading.json; path = ../../../Resources/Animations/root_loading.json; sourceTree = "<group>"; };
+		D5C3ACD4253E09B70018CEB9 /* root_loading_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = root_loading_2.json; path = ../../../Resources/Animations/root_loading_2.json; sourceTree = "<group>"; };
+		D5E1536A2540DF0700E59A41 /* AllLaunchesTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLaunchesTVCell.swift; sourceTree = "<group>"; };
+		D5E1536B2540DF0700E59A41 /* AllLaunchesTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllLaunchesTVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,24 +61,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51D440E5FCD9EFDD34C6F2C3 /* Pods_RocketLauncher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		652FF4BFA7FD5E88371CA7E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E2584E7D0229C45C793C10C /* Pods_RocketLauncher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D539C3E5253B49B000AF9202 = {
 			isa = PBXGroup;
 			children = (
 				D539C3F0253B49B000AF9202 /* RocketLauncher */,
 				D539C3EF253B49B000AF9202 /* Products */,
+				DDCFF2DC230573001E452483 /* Pods */,
+				652FF4BFA7FD5E88371CA7E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		D539C3EF253B49B000AF9202 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D539C3EE253B49B000AF9202 /* RocketLauncher.app */,
+				D539C3EE253B49B000AF9202 /* Rocket Launcher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +97,7 @@
 		D539C3F0253B49B000AF9202 /* RocketLauncher */ = {
 			isa = PBXGroup;
 			children = (
+				D5C3ACD2253E09990018CEB9 /* Animations */,
 				D56664E4253B5466005BD9FC /* Fonts */,
 				D56664E5253B5472005BD9FC /* Helpers */,
 				D56664F3253DF48F005BD9FC /* Networking */,
@@ -93,6 +125,8 @@
 		D56664E5253B5472005BD9FC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D59F213F253E3B8A00B368FC /* Extensions.swift */,
+				D59F213C253E3B6200B368FC /* DebugTools.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -109,6 +143,8 @@
 		D56664E7253B54CE005BD9FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D5E1536A2540DF0700E59A41 /* AllLaunchesTVCell.swift */,
+				D5E1536B2540DF0700E59A41 /* AllLaunchesTVCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,6 +152,8 @@
 		D56664E8253B54D6005BD9FC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D59F2136253E2E1100B368FC /* AllLaunchesVC.swift */,
+				D59F2139253E2E6500B368FC /* LaunchDetailVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,24 +168,44 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		D5C3ACD2253E09990018CEB9 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D5C3ACD4253E09B70018CEB9 /* root_loading_2.json */,
+				D5C3ACD3253E09B70018CEB9 /* root_loading.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		DDCFF2DC230573001E452483 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A67EB5C3A98F22C1D90C38F /* Pods-RocketLauncher.debug.xcconfig */,
+				A959D130C3B38F8A75B0BF0D /* Pods-RocketLauncher.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D539C3ED253B49B000AF9202 /* RocketLauncher */ = {
+		D539C3ED253B49B000AF9202 /* Rocket Launcher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D539C400253B49B300AF9202 /* Build configuration list for PBXNativeTarget "RocketLauncher" */;
+			buildConfigurationList = D539C400253B49B300AF9202 /* Build configuration list for PBXNativeTarget "Rocket Launcher" */;
 			buildPhases = (
+				F9B8E022EC2CA6F9494DE13D /* [CP] Check Pods Manifest.lock */,
 				D539C3EA253B49B000AF9202 /* Sources */,
 				D539C3EB253B49B000AF9202 /* Frameworks */,
 				D539C3EC253B49B000AF9202 /* Resources */,
+				E5988667F13F79A6726CDC33 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RocketLauncher;
+			name = "Rocket Launcher";
 			productName = RocketLauncher;
-			productReference = D539C3EE253B49B000AF9202 /* RocketLauncher.app */;
+			productReference = D539C3EE253B49B000AF9202 /* Rocket Launcher.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -178,7 +236,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D539C3ED253B49B000AF9202 /* RocketLauncher */,
+				D539C3ED253B49B000AF9202 /* Rocket Launcher */,
 			);
 		};
 /* End PBXProject section */
@@ -188,14 +246,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C3ACD5253E09B70018CEB9 /* root_loading.json in Resources */,
+				D5C3ACD6253E09B70018CEB9 /* root_loading_2.json in Resources */,
 				D56664EC253B5607005BD9FC /* saxmono.ttf in Resources */,
 				D539C3FC253B49B300AF9202 /* LaunchScreen.storyboard in Resources */,
 				D539C3F9253B49B300AF9202 /* Assets.xcassets in Resources */,
+				D5E1536D2540DF0700E59A41 /* AllLaunchesTVCell.xib in Resources */,
 				D539C3F7253B49B000AF9202 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E5988667F13F79A6726CDC33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RocketLauncher/Pods-RocketLauncher-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RocketLauncher/Pods-RocketLauncher-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RocketLauncher/Pods-RocketLauncher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9B8E022EC2CA6F9494DE13D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RocketLauncher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D539C3EA253B49B000AF9202 /* Sources */ = {
@@ -205,10 +308,15 @@
 				D56664F7253DF4CB005BD9FC /* DataModel.swift in Sources */,
 				D56664EA253B5519005BD9FC /* RootVC.swift in Sources */,
 				D56664F6253DF4CB005BD9FC /* DataContext.swift in Sources */,
+				D59F2137253E2E1100B368FC /* AllLaunchesVC.swift in Sources */,
 				D56664F2253DF3FF005BD9FC /* ServiceErrors.swift in Sources */,
 				D56664F0253DF390005BD9FC /* Services.swift in Sources */,
+				D59F213A253E2E6500B368FC /* LaunchDetailVC.swift in Sources */,
 				D56664EE253DF376005BD9FC /* ServiceModel.swift in Sources */,
+				D5E1536C2540DF0700E59A41 /* AllLaunchesTVCell.swift in Sources */,
 				D539C3F2253B49B000AF9202 /* AppDelegate.swift in Sources */,
+				D59F2140253E3B8A00B368FC /* Extensions.swift in Sources */,
+				D59F213D253E3B6200B368FC /* DebugTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +460,7 @@
 		};
 		D539C401253B49B300AF9202 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A67EB5C3A98F22C1D90C38F /* Pods-RocketLauncher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,6 +479,7 @@
 		};
 		D539C402253B49B300AF9202 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A959D130C3B38F8A75B0BF0D /* Pods-RocketLauncher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -398,7 +508,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D539C400253B49B300AF9202 /* Build configuration list for PBXNativeTarget "RocketLauncher" */ = {
+		D539C400253B49B300AF9202 /* Build configuration list for PBXNativeTarget "Rocket Launcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D539C401253B49B300AF9202 /* Debug */,
