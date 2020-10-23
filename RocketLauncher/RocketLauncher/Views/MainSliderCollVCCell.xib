@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="saxmono.ttf">
+            <string>saxMono</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MainSliderCollVCCell" customModule="Rocket_Launcher" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="288" height="128"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJN-HC-XIa" userLabel="ContentView">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="128"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Hj-sL-d9F" userLabel="picturedContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="128"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h44-eN-Yd0">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="128"/>
+                                    </imageView>
+                                    <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jm3-5P-h54" userLabel="FiligranView">
+                                        <rect key="frame" x="0.0" y="96" width="288" height="32"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jm3-5P-h54" secondAttribute="height" multiplier="9:1" id="u9G-bL-72e"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="KZf-IA-bF4">
+                                        <rect key="frame" x="8" y="100" width="136" height="24"/>
+                                        <fontDescription key="fontDescription" name="saxMono" family="saxMono" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02.02.2020 08:00 UTC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="si1-Pm-NoS">
+                                        <rect key="frame" x="200" y="100" width="80" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="h44-eN-Yd0" secondAttribute="bottom" id="CLp-YP-Yk4"/>
+                                    <constraint firstItem="si1-Pm-NoS" firstAttribute="top" secondItem="jm3-5P-h54" secondAttribute="top" constant="4" id="D01-vA-6p7"/>
+                                    <constraint firstAttribute="trailing" secondItem="jm3-5P-h54" secondAttribute="trailing" id="HPA-Ar-SvI"/>
+                                    <constraint firstItem="KZf-IA-bF4" firstAttribute="bottom" secondItem="jm3-5P-h54" secondAttribute="bottom" constant="-4" id="JfS-M2-8In"/>
+                                    <constraint firstAttribute="bottom" secondItem="jm3-5P-h54" secondAttribute="bottom" id="LMb-dc-dTc"/>
+                                    <constraint firstItem="KZf-IA-bF4" firstAttribute="leading" secondItem="jm3-5P-h54" secondAttribute="leading" constant="8" id="NIf-8U-XKF"/>
+                                    <constraint firstItem="KZf-IA-bF4" firstAttribute="trailing" secondItem="jm3-5P-h54" secondAttribute="trailing" constant="-144" id="OM3-3r-P4p"/>
+                                    <constraint firstAttribute="trailing" secondItem="h44-eN-Yd0" secondAttribute="trailing" id="P0c-Uo-e9B"/>
+                                    <constraint firstItem="h44-eN-Yd0" firstAttribute="top" secondItem="8Hj-sL-d9F" secondAttribute="top" id="SSi-ec-9gk"/>
+                                    <constraint firstItem="h44-eN-Yd0" firstAttribute="leading" secondItem="8Hj-sL-d9F" secondAttribute="leading" id="mS5-S4-gPm"/>
+                                    <constraint firstItem="KZf-IA-bF4" firstAttribute="top" secondItem="jm3-5P-h54" secondAttribute="top" constant="4" id="sAR-rT-UX8"/>
+                                    <constraint firstItem="si1-Pm-NoS" firstAttribute="leading" secondItem="jm3-5P-h54" secondAttribute="leading" constant="200" id="tIo-lr-LPs"/>
+                                    <constraint firstItem="jm3-5P-h54" firstAttribute="leading" secondItem="8Hj-sL-d9F" secondAttribute="leading" id="vxc-10-hfY"/>
+                                    <constraint firstItem="si1-Pm-NoS" firstAttribute="bottom" secondItem="jm3-5P-h54" secondAttribute="bottom" constant="-10" id="xXa-6U-k33"/>
+                                    <constraint firstItem="si1-Pm-NoS" firstAttribute="trailing" secondItem="jm3-5P-h54" secondAttribute="trailing" constant="-8" id="yby-ST-vU2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8Hj-sL-d9F" secondAttribute="bottom" id="AVE-9a-gq3"/>
+                            <constraint firstItem="8Hj-sL-d9F" firstAttribute="top" secondItem="xJN-HC-XIa" secondAttribute="top" id="iQL-Zm-2Cb"/>
+                            <constraint firstItem="8Hj-sL-d9F" firstAttribute="leading" secondItem="xJN-HC-XIa" secondAttribute="leading" id="icw-fH-vBY"/>
+                            <constraint firstAttribute="trailing" secondItem="8Hj-sL-d9F" secondAttribute="trailing" id="mLc-K0-V85"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xJN-HC-XIa" secondAttribute="bottom" id="4Yd-Oa-AO8"/>
+                <constraint firstItem="xJN-HC-XIa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6kW-XQ-cAg"/>
+                <constraint firstItem="xJN-HC-XIa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="C8c-rD-1kK"/>
+                <constraint firstAttribute="trailing" secondItem="xJN-HC-XIa" secondAttribute="trailing" id="mLZ-d0-KuU"/>
+            </constraints>
+            <size key="customSize" width="288" height="128"/>
+            <connections>
+                <outlet property="dateLB" destination="si1-Pm-NoS" id="PBq-Ej-ZwB"/>
+                <outlet property="pictureIV" destination="h44-eN-Yd0" id="pK5-h2-D2j"/>
+                <outlet property="titleLB" destination="KZf-IA-bF4" id="dd7-Nl-h7L"/>
+            </connections>
+            <point key="canvasLocation" x="310.14492753623193" y="111.83035714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

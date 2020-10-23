@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		51D440E5FCD9EFDD34C6F2C3 /* Pods_RocketLauncher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2584E7D0229C45C793C10C /* Pods_RocketLauncher.framework */; };
+		D5010DE42542530100DEF77F /* MainSliderCollVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5010DE22542530100DEF77F /* MainSliderCollVCCell.swift */; };
+		D5010DE52542530100DEF77F /* MainSliderCollVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5010DE32542530100DEF77F /* MainSliderCollVCCell.xib */; };
 		D539C3F2253B49B000AF9202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539C3F1253B49B000AF9202 /* AppDelegate.swift */; };
 		D539C3F7253B49B000AF9202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D539C3F5253B49B000AF9202 /* Main.storyboard */; };
 		D539C3F9253B49B300AF9202 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D539C3F8253B49B300AF9202 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		5A67EB5C3A98F22C1D90C38F /* Pods-RocketLauncher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketLauncher.debug.xcconfig"; path = "Target Support Files/Pods-RocketLauncher/Pods-RocketLauncher.debug.xcconfig"; sourceTree = "<group>"; };
 		9E2584E7D0229C45C793C10C /* Pods_RocketLauncher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketLauncher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A959D130C3B38F8A75B0BF0D /* Pods-RocketLauncher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketLauncher.release.xcconfig"; path = "Target Support Files/Pods-RocketLauncher/Pods-RocketLauncher.release.xcconfig"; sourceTree = "<group>"; };
+		D5010DE22542530100DEF77F /* MainSliderCollVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSliderCollVCCell.swift; sourceTree = "<group>"; };
+		D5010DE32542530100DEF77F /* MainSliderCollVCCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainSliderCollVCCell.xib; sourceTree = "<group>"; };
 		D539C3EE253B49B000AF9202 /* Rocket Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rocket Launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D539C3F1253B49B000AF9202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D539C3F6253B49B000AF9202 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			children = (
 				D5E1536A2540DF0700E59A41 /* AllLaunchesTVCell.swift */,
 				D5E1536B2540DF0700E59A41 /* AllLaunchesTVCell.xib */,
+				D5010DE22542530100DEF77F /* MainSliderCollVCCell.swift */,
+				D5010DE32542530100DEF77F /* MainSliderCollVCCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 				D5C3ACD6253E09B70018CEB9 /* root_loading_2.json in Resources */,
 				D56664EC253B5607005BD9FC /* saxmono.ttf in Resources */,
 				D539C3FC253B49B300AF9202 /* LaunchScreen.storyboard in Resources */,
+				D5010DE52542530100DEF77F /* MainSliderCollVCCell.xib in Resources */,
 				D539C3F9253B49B300AF9202 /* Assets.xcassets in Resources */,
 				D5E1536D2540DF0700E59A41 /* AllLaunchesTVCell.xib in Resources */,
 				D539C3F7253B49B000AF9202 /* Main.storyboard in Resources */,
@@ -313,6 +320,7 @@
 				D56664F0253DF390005BD9FC /* Services.swift in Sources */,
 				D59F213A253E2E6500B368FC /* LaunchDetailVC.swift in Sources */,
 				D56664EE253DF376005BD9FC /* ServiceModel.swift in Sources */,
+				D5010DE42542530100DEF77F /* MainSliderCollVCCell.swift in Sources */,
 				D5E1536C2540DF0700E59A41 /* AllLaunchesTVCell.swift in Sources */,
 				D539C3F2253B49B000AF9202 /* AppDelegate.swift in Sources */,
 				D59F2140253E3B8A00B368FC /* Extensions.swift in Sources */,

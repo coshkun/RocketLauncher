@@ -28,25 +28,51 @@ class LaunchDetailVC:UIViewController {
         
         detailTX.textContainerInset = UIEdgeInsets(top: 2, left: -4, bottom: 2, right: -4)
         
-        if let i = item {
-            // fill-up current data
-            missionNameTF.text = i.missionName
-            launchSiteTF.text = i.launchSite.siteName
-            
-            let date = Date(fromString: i.launchDateUTC, withFormat: "yyyy-MM-dd'T'hh:mm:ss.sss'Z'")
-            departureTimeTF.text = date.stringDateTimeValue + " in UTC"
-            
-            detailTX.text = i.details
-            
-            let placeHolder = UIImage(named: "image_placeholder_640x320")
-            guard let link = i.links.flickrImages.first,
-                  let url = URL(string: link) else {
-                pictureIV.image = placeHolder
-                return
+        // Biding Example for Stored Data
+//        if let launche = item {
+//            // fill-up current data
+//            fillDataFrom(launche)
+//        }
+        
+        // But Challange asks that: "Launch detail data should getted from 'launches/{flightNumber}' "
+        // So let we fetch it from service
+        reloadData()
+    }
+    
+    
+    func reloadData(_ completion:(()->())? = nil) {
+        guard let flightNumber = item?.flightNumber else {return}
+        Services.main.getLauncheBy(flightNumber) { (respone, message) in
+            //all asyncs are thread safe, turns back to MainQueue
+            ErrorManager.main.handleStatesAsync(respone?.result, message: message) {
+                self.fillDataFrom(respone!.result)
+                completion?()
             }
-            pictureIV.kf.setImage(with: url, placeholder: placeHolder)
-            
         }
+    }
+    
+    func fillDataFrom(_ launche:Launch) {
+        // fill-up current data
+        missionNameTF.text = launche.missionName
+        launchSiteTF.text = launche.launchSite.siteName
+        
+        let date = Date(fromString: launche.launchDateUTC, withFormat: "yyyy-MM-dd'T'hh:mm:ss.sss'Z'")
+        departureTimeTF.text = date.stringDateTimeValue + " in UTC"
+        
+        detailTX.text = launche.details
+        
+        let placeHolder = UIImage(named: "image_placeholder_640x320")
+        guard let link = launche.links.flickrImages.first,
+              let url = URL(string: link) else {
+            pictureIV.image = placeHolder
+            return
+        }
+        pictureIV.kf.setImage(with: url, placeholder: placeHolder, completionHandler: { (_image, _, _, _) in
+            if let image = _image {
+                // if portraid, fit the image to prevent zoom effect
+                self.pictureIV.contentMode = image.size.height > image.size.width ? .scaleAspectFit : .scaleAspectFill
+            }
+        })
     }
     
     @IBAction func backBT_Action(_ sender:UIButton!) {

@@ -129,6 +129,42 @@ extension Services {
             }
         }
     }
+    
+    func getLauncheBy(_ flightNumber:Int, _ completion: @escaping ((SingleLauncheDTO?, ServiceMessage) -> ()) ) {
+        let endPoint = baseURL + EndPoints.getLauncheByID.rawValue + "\(flightNumber)"
+        //let language = lang ?? Localization.main.currentLanguage
+        //var parameters:[String:Any] = ["lang":"\(language)"]
+        
+        let headers = [ "Content-Type":"application/json",
+                        "Accept": "application/json",
+                        "Accept-Encoding":"gzip, deflate, br",
+                        "Cache-Control":"no-cache",
+                        "Connection":"keep-alive",
+                        "User-Agent":"IOS-\(UIDevice.current.deviceName)/\(UIDevice.current.model)"
+        ]
+        
+        NAIM.startNetworkOperation()                                        //URLEncoding.httpBody
+        Alamofire.request(endPoint,  method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData { (response) in
+            NAIM.stopNetworkOperation()
+            guard let data = response.result.value else { completion(nil, .connectionErr); return }
+            do {
+                let json = try JSON(data: data)
+                if let err = json["error"].string,
+                    err != "0" {
+                    let errText = json["errorText"].stringValue
+                    completion(nil, .responseErr(text: errText))
+                } else {
+                    //everything is ok here..
+                    let dto = try SingleLauncheDTO(json: json)
+                    completion(dto, .successMsg(text: json["errorText"].stringValue))
+                }
+            } catch {
+                //print("**Hata: \(error)")
+                //print("**Hata: \(ServiceError.jsonParsingErr) on: \(endPoint)")
+                completion(nil, .jsonParsingErrOn(line:"❌ Error --> File:\(#file) -> Function:\(#function) -> Line:\(#line)"))
+            }
+        }
+    }
 }
 
 

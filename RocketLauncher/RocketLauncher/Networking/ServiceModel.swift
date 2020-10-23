@@ -32,6 +32,18 @@ struct UpcomingLaunchesDTO {
     }
 }
 
+struct SingleLauncheDTO {
+    let result:Launch
+    
+    init?(json:JSON) throws {
+        guard let _ = json.dictionary else { throw ServiceMessage.jsonParsingErr }
+        // make any changes here if the structure differs,
+        // lucky us, it's the same ;)
+        let sonuc = Launch(json: json) 
+        self.result = sonuc
+    }
+}
+
 
 // MARK: - Launch
 struct Launch: Codable {
@@ -397,6 +409,7 @@ extension Payload {
 struct OrbitParams: Codable {
     var referenceSystem: ReferenceSystem!
     var regime: Regime?
+    var latitude: Double! //bunu eklemeyi unutmuşlar, biz ekleyelim. enlem olmadan boylam verilmez.
     var longitude, semiMajorAxisKM, eccentricity, periapsisKM: Double!
     var apoapsisKM, inclinationDeg, periodMin, lifespanYears: Double!
     var epoch: String?
@@ -407,6 +420,7 @@ extension OrbitParams {
     init(json:JSON) {
         referenceSystem = ReferenceSystem(rawValue: json["reference_system"].stringValue.camelized) ?? .unknown
         regime          = Regime(rawValue: json["regime"].stringValue.camelized) ?? .unknown
+        latitude        = json["latitude"].double ?? 0
         longitude       = json["longitude"].double ?? 0
         semiMajorAxisKM = json["semi_major_axis_km"].double ?? 0
         eccentricity    = json["eccentricity"].double ?? 0
