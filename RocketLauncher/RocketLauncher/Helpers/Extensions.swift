@@ -2,7 +2,7 @@
 //  Extensions.swift
 //  CCBaseFramework
 //
-//  Created by Coskun Appwox on 3.04.2019.
+//  Created by Coskun Caner on 3.04.2019.
 //  Copyright © 2019 Coskun Caner. All rights reserved.
 //
 
